@@ -1,7 +1,6 @@
 # Spell Check package
-[![CI](https://github.com/atom/spell-check/actions/workflows/ci.yml/badge.svg)](https://github.com/atom/spell-check/actions/workflows/ci.yml)
 
-Highlights misspelling in Atom and shows possible corrections.
+Highlights misspelling in Pulsar and shows possible corrections.
 
 Use <kbd>cmd-shift-:</kbd> for Mac or <kbd>ctrl-shift-:</kbd> for Windows or Linux to bring up the list of corrections when your cursor is on a misspelled word.
 
@@ -15,16 +14,16 @@ By default spell check is enabled for the following files:
 
 You can override this from the _Spell Check_ settings in the Settings View (<kbd>cmd-,</kbd>). The Grammars config option is a list of scopes for which the package will check for spelling errors.
 
-To enable _Spell Check_ for your current file type: put your cursor in the file, open the [Command Palette](https://github.com/atom/command-palette)
+To enable _Spell Check_ for your current file type: put your cursor in the file, open the [Command Palette](https://github.com/pulsar-edit/command-palette)
 (<kbd>cmd-shift-p</kbd> for Mac or <kbd>ctrl-shift-p</kbd> for Windows or Linux), and run the `Editor: Log Cursor Scope` command. This will trigger a notification which will contain a list of scopes. The first scope that's listed is the one you should add to the list of scopes in the settings for the _Spell Check_ package. Here are some examples: `source.coffee`, `text.plain`, `text.html.basic`.
 
 ## Changing the dictionary
 
-Except for Mac, Atom needs to know what language to use to perform spell-checking. To list these, set the "Locales" configuration option to the [IETF tag](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) (en-US, fr-FR, etc). More than one language can be used, simply separate them by commas.
+Except for Mac, Pulsar needs to know what language to use to perform spell-checking. To list these, set the "Locales" configuration option to the [IETF tag](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) (en-US, fr-FR, etc). More than one language can be used, simply separate them by commas.
 
-If no locale is given, then Atom will attempt to infer the language based on environment variables and settings.
+If no locale is given, then Pulsar will attempt to infer the language based on environment variables and settings.
 
-If any value is given for the "Locales", then Atom will not automatically add the browser language. So, if your browser is United States English (`en-US`), leaving this blank will still do US English checking. However, if it the "Locales" is set to French (`fr-FR`), then the checker will only check French. If the "Locales" is set to `en-US, fr-FR`, then both languages will be checked.
+If any value is given for the "Locales", then Pulsar will not automatically add the browser language. So, if your browser is United States English (`en-US`), leaving this blank will still do US English checking. However, if it the "Locales" is set to French (`fr-FR`), then the checker will only check French. If the "Locales" is set to `en-US, fr-FR`, then both languages will be checked.
 
 ### Missing Languages
 
@@ -34,13 +33,13 @@ To get the search paths used to look for a dictionary, make sure the "Notices Mo
 
 ## Mac
 
-On the Mac, checking "Use System" will use the operating system's spellchecking library. This uses all of the user's loaded dictionaries and doesn't require any customization within Atom.
+On the Mac, checking "Use System" will use the operating system's spellchecking library. This uses all of the user's loaded dictionaries and doesn't require any customization within Pulsar.
 
 Checking "Use Locales" and providing locales would use Hunspell as additional dictionaries. Having "Use Locales" checked but no locales given will do nothing.
 
 ## Windows 8 and Higher
 
-For Windows 8 and 10, this package uses the Windows spell checker, so you must install the language using the regional settings before the language can be chosen inside Atom.
+For Windows 8 and 10, this package uses the Windows spell checker, so you must install the language using the regional settings before the language can be chosen inside Pulsar.
 
 ![Add the language from the Language and Regions settings panel](docs/windows-10-language-settings.png)
 
@@ -50,7 +49,7 @@ If your Windows user does not have Administration privileges, you'll need to do 
 
 ![Download the "Basic Typing" language option](docs/windows-10-language-settings-3.png)
 
-Once the additional language is added, Atom will need to be restarted and configured to use it. Add the IEFT tag into the "Locales" setting for the language to be set.
+Once the additional language is added, Pulsar will need to be restarted and configured to use it. Add the IEFT tag into the "Locales" setting for the language to be set.
 
 If a Hunspell dictionary is found on a path (see below), it will be used in favor of the Windows API.
 
@@ -80,7 +79,7 @@ You can get a list of currently installed languages with:
 /usr/bin/hunspell -D
 ```
 
-Atom may require a restart to pick up newly installed dictionaries.
+Pulsar may require a restart to pick up newly installed dictionaries.
 
 ### Arch Linux
 
