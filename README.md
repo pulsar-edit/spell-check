@@ -1,5 +1,7 @@
 # Spell Check package
 
+# This repo is archived under Pulsar-Edit, as it is [now bundled](https://github.com/pulsar-edit/pulsar/pull/614) within the editor.
+
 Highlights misspelling in Pulsar and shows possible corrections.
 
 Use <kbd>cmd-shift-:</kbd> for Mac or <kbd>ctrl-shift-:</kbd> for Windows or Linux to bring up the list of corrections when your cursor is on a misspelled word.
